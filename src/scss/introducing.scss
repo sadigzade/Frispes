@@ -1,0 +1,40 @@
+/* .introducing */
+.introducing {
+  padding-top: 56px;
+  /* .introducing-subtitle */
+  &-subtitle {
+    font-weight: 500;
+    color: $dark;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 15px);
+      width: 73px;
+      height: 2px;
+      background-color: $dark;
+    }
+  }
+  /* .introducing-header */
+  &-header {
+    margin-top: 8px;
+    display: flex;
+    /* .introducing-header__title */
+    &__title {
+      font-family: 'Lora', sans-serif;
+      font-size: 52px;
+      line-height: 67px;
+      color: #10375C;
+      span {
+        color: #DD2C00;
+      }
+    }
+    &__descr {
+      margin-left: 61px;
+      font-weight: 500;
+      color: #6A6A6A;
+      max-width: 382px;
+    }
+  }
+}

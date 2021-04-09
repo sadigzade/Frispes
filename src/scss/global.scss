@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontFamily;
+  height: 100vh;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (max-width: $md3+'px') {
+  body.lock {
+    overflow: hidden;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+}
+
+input,
+input:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
