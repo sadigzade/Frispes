@@ -1,40 +1,66 @@
 /* .introducing */
 .introducing {
   padding-top: 56px;
-  /* .introducing-subtitle */
-  &-subtitle {
-    font-weight: 500;
-    color: $dark;
-    position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: calc(100% + 15px);
-      width: 73px;
-      height: 2px;
-      background-color: $dark;
-    }
+  @media (max-width: $md3+'px') {
+    padding-top: 40px;
   }
   /* .introducing-header */
   &-header {
     margin-top: 8px;
-    display: flex;
     /* .introducing-header__title */
     &__title {
-      font-family: 'Lora', sans-serif;
       font-size: 52px;
       line-height: 67px;
-      color: #10375C;
-      span {
-        color: #DD2C00;
+      @media (max-width: $md3+'px') {
+        font-size: 48px;
+        line-height: 54px;
+      }
+      @media (max-width: $md4+'px') {
+        font-size: 42px;
+        line-height: 46px;
       }
     }
+    /* .introducing-header__descr */
     &__descr {
-      margin-left: 61px;
-      font-weight: 500;
-      color: #6A6A6A;
       max-width: 382px;
+    }
+  }
+  /* .introducing-slider */
+  &-slider {
+    position: relative;
+    max-height: 566px;
+    width: 100%;
+    margin-top: 33px;
+    z-index: 0;
+    /* .introducing-slider */
+    &__item {
+      img {
+        width: 100%;
+      }
+    }
+    /* Точки (булиты) */
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      bottom: 37px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0;
+      @media (max-width: $md4+'px') {
+        bottom: 20px;
+      }
+    }
+    .slick-dots li {
+      width: 16px;
+      height: 4px;
+      background: rgba(#fff, 0.5);
+      margin-right: 4px;
+      transition: all .3s ease 0s;
+    }
+    /* Активная точка */
+    .slick-dots li.slick-active {
+      width: 40px;
+      background-color: $active;
     }
   }
 }

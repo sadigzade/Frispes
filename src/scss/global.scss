@@ -9,6 +9,7 @@ body {
   height: 100vh;
   font-size: 20px;
   line-height: 30px;
+  font-weight: 400;
 }
 
 @media (max-width: $md3+'px') {
@@ -56,4 +57,66 @@ h5,
 p {
   margin: 0;
   padding: 0;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+}
+/* Слайд */
+.slick-slide {
+  outline: none;
+}
+
+/* .[section-name] */
+.introducing,
+.spaces {
+  /* .[...]-subtitle */
+  &-subtitle {
+    font-weight: 500;
+    color: $dark;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 15px);
+      width: 73px;
+      height: 2px;
+      background-color: $dark;
+    }
+  }
+  /* .[...]-header */
+  &-header {
+    display: flex;
+    @media (max-width: $md3+'px') {
+      flex-direction: column;
+    }
+    /* .[...]-header__title */
+    &__title {
+      font-family: 'Lora', sans-serif;
+      font-size: 40px;
+      line-height: 51px;
+      color: #10375C;
+      span {
+        color: #DD2C00;
+      }
+    }
+    /* .[...]-header__descr */
+    &__descr {
+      margin-left: 61px;
+      font-weight: 500;
+      color: #6A6A6A;
+      @media (max-width: $md3+'px') {
+        margin: 20px 0 0 0;
+      }
+    }
+  }
 }
